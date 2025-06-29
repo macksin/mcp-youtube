@@ -1,0 +1,42 @@
+{
+  "name": "mcp-youtube",
+  "version": "1.0.0",
+  "description": "A MCP server that provides functionality to download YouTube videos, music, transcripts and slices",
+  "license": "MIT",
+  "author": "",
+  "homepage": "https://github.com/your-username/mcp-youtube",
+  "bugs": "https://github.com/your-username/mcp-youtube/issues",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "bin": {
+    "mcp-youtube": "dist/index.js"
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc && shx chmod +x dist/*.js",
+    "prepare": "npm run build",
+    "watch": "tsc --watch",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "lint": "eslint src/**/*.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": ["mcp", "youtube", "download", "video", "audio", "transcript"],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "0.6.0",
+    "@distube/ytdl-core": "^4.14.4",
+    "youtube-captions-scraper": "^2.0.3",
+    "fluent-ffmpeg": "^2.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "@types/fluent-ffmpeg": "^2.1.24",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.0.0",
+    "shx": "^0.3.4",
+    "tsx": "^4.0.0",
+    "typescript": "^5.6.2"
+  }
+}
